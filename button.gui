@@ -1,0 +1,23 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiBitmapButtonCtrl(GlassLiveModeratorButton) {
+   profile = "GlassRoundedButtonProfile";
+   horizSizing = "right";
+   vertSizing = "top";
+   position = "6 490";
+   extent = "135 30";
+   minExtent = "8 2";
+   enabled = "1";
+   visible = "1";
+   clipToParent = "1";
+   command = "GlassOverlay::openModeration();";
+   groupNum = "-1";
+   buttonType = "PushButton";
+   bitmap = "~/System_BlocklandGlass/image/gui/btn_moderation";
+   lockAspectRatio = "0";
+   alignLeft = "0";
+   alignTop = "0";
+   overflowImage = "0";
+   mKeepCached = "0";
+   mColor = "255 255 255 255";
+};
+//--- OBJECT WRITE END ---

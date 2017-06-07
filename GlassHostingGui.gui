@@ -1,0 +1,228 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(GlassHostingGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 2";
+   enabled = "1";
+   visible = "1";
+   clipToParent = "1";
+
+   new GuiWindowCtrl(GlassHostingGui_Window) {
+      profile = "GlassWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "15 13";
+      extent = "770 574";
+      minExtent = "8 2";
+      enabled = "1";
+      visible = "1";
+      clipToParent = "1";
+      text = "Glass Hosting";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(GlassHostingGui);";
+
+      new GuiSwatchCtrl(GlassHostingGui_AddTab) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 35";
+         extent = "70 25";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         color = "220 220 220 255";
+
+         new GuiTextCtrl() {
+            profile = "GlassFriendTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 3";
+            extent = "25 17";
+            minExtent = "8 2";
+            enabled = "1";
+            visible = "1";
+            clipToParent = "1";
+            text = "Add";
+            maxLength = "255";
+         };
+
+         new GuiMouseEventCtrl(GlassHostingGui_PanelTabMouse) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "70 25";
+         };
+      };
+      new GuiSwatchCtrl(GlassHostingGui_AddPanel) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "80 35";
+         extent = "680 525";
+         minExtent = "8 2";
+         enabled = "1";
+         visible = "1";
+         clipToParent = "1";
+         color = "220 220 220 255";
+
+         new GuiSwatchCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "center";
+            vertSizing = "center";
+            position = "155 127";
+            extent = "380 270";
+            minExtent = "8 2";
+            enabled = "1";
+            visible = "1";
+            clipToParent = "1";
+            command = "GlassHostingGui::codeInput(2);";
+            color = "255 255 255 255";
+
+            new GuiMLTextCtrl() {
+               profile = "GuiMLTextProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "10 10";
+               extent = "370 112";
+               minExtent = "8 2";
+               enabled = "1";
+               visible = "1";
+               clipToParent = "1";
+               lineSpacing = "2";
+               allowColorChars = "0";
+               maxChars = "-1";
+               text = "<just:center><font:verdana bold:17>Glass Hosting Premium<br><br><just:left><font:verdana:13>Glass Hosting Premium offers an in-game control panel and console, allowing you to control your server without leaving Blockland!<br><br>You can find a pairing code on the online Control Panel accessible to the server subscriber under the \"Premium\" tab.";
+               maxBitmapHeight = "-1";
+               selectable = "1";
+               autoResize = "1";
+            };
+            new GuiSwatchCtrl(GH_AddSwatch) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "center";
+               vertSizing = "bottom";
+               position = "30 150";
+               extent = "320 29";
+               minExtent = "8 2";
+               enabled = "1";
+               visible = "1";
+               clipToParent = "1";
+               color = "0 100 144 2";
+
+               new GuiTextEditCtrl(GlassHostingGui_Add1) {
+                  profile = "GlassHostingCodeProfile";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  position = "0 0";
+                  extent = "80 29";
+                  minExtent = "8 2";
+                  enabled = "1";
+                  visible = "1";
+                  clipToParent = "1";
+                  command = "GlassHostingGui::codeInput(1);";
+                  altCommand = "GlassHostingGui::codeSubmit();";
+                  maxLength = "255";
+                  historySize = "0";
+                  password = "0";
+                  tabComplete = "0";
+                  sinkAllKeyEvents = "0";
+               };
+               new GuiTextEditCtrl(GlassHostingGui_Add2) {
+                  profile = "GlassHostingCodeProfile";
+                  horizSizing = "center";
+                  vertSizing = "bottom";
+                  position = "120 0";
+                  extent = "80 29";
+                  minExtent = "8 2";
+                  enabled = "1";
+                  visible = "1";
+                  clipToParent = "1";
+                  command = "GlassHostingGui::codeInput(2);";
+                  altCommand = "GlassHostingGui::codeSubmit();";
+                  maxLength = "255";
+                  historySize = "0";
+                  password = "0";
+                  tabComplete = "0";
+                  sinkAllKeyEvents = "0";
+               };
+               new GuiTextEditCtrl(GlassHostingGui_Add3) {
+                  profile = "GlassHostingCodeProfile";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  position = "240 0";
+                  extent = "80 29";
+                  minExtent = "8 2";
+                  enabled = "1";
+                  visible = "1";
+                  clipToParent = "1";
+                  command = "GlassHostingGui::codeInput(3);";
+                  altCommand = "GlassHostingGui::codeSubmit();";
+                  maxLength = "255";
+                  historySize = "0";
+                  password = "0";
+                  tabComplete = "0";
+                  sinkAllKeyEvents = "0";
+               };
+               new GuiSwatchCtrl() {
+                  profile = "GuiDefaultProfile";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  position = "85 12";
+                  extent = "30 5";
+                  minExtent = "8 2";
+                  enabled = "1";
+                  visible = "1";
+                  clipToParent = "1";
+                  color = "150 150 150 255";
+               };
+               new GuiSwatchCtrl() {
+                  profile = "GuiDefaultProfile";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  position = "205 12";
+                  extent = "30 5";
+                  minExtent = "8 2";
+                  enabled = "1";
+                  visible = "1";
+                  clipToParent = "1";
+                  color = "150 150 150 255";
+               };
+            };
+            new GuiBitmapButtonCtrl() {
+               profile = "GlassBlockButtonProfile";
+               horizSizing = "center";
+               vertSizing = "bottom";
+               position = "120 225";
+               extent = "140 30";
+               minExtent = "8 2";
+               enabled = "1";
+               visible = "1";
+               clipToParent = "1";
+               command = "GlassHostingGui::codeSubmit();";
+               text = "Add";
+               groupNum = "-1";
+               buttonType = "PushButton";
+               bitmap = "~/System_BlocklandGlass/image/gui/btn";
+               lockAspectRatio = "0";
+               alignLeft = "0";
+               alignTop = "0";
+               overflowImage = "0";
+               mKeepCached = "0";
+               mColor = "131 195 243 255";
+            };
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
