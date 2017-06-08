@@ -53,7 +53,6 @@ function GlassHosting::loadPanel(%ident, %address, %port) {
 }
 
 function GlassHostingInstance::onValueUpdate(%this, %key, %value) {
-  echo(%key @ " - " @ %value);
   if(%key $= "hostName" || %key $= "serverName") {
     GlassHostingGui::updateHeader(%this);
   }
@@ -190,7 +189,6 @@ function GlassHostingAddTCP::onDone(%this, %error) {
   %obj = $JSON::Value;
 
   if(%obj.status $= "success") {
-    echo(%this.buffer);
     %name = %obj.name;
     %address = %obj.address;
 
@@ -210,6 +208,16 @@ function GlassHostingAddTCP::onDone(%this, %error) {
     else
       echo("Failed to load Glass Hosting Server: " @ %obj.status);
   }
+}
+
+function GlassHosting::toggleWindow() {
+  if(GlassHostingGui_Window.getGroup().getName() $= "GlassHostingGui") {
+    GlassOverlayGui.add(GlassHostingGui_Window);
+  }
+  else if(GlassHostingGui_Window.visible)
+    GlassHostingGui_Window.setVisible(false);
+  else
+    GlassHostingGui_Window.setVisible(true);
 }
 
 function GlassHosting::loadPanels() {

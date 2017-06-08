@@ -9,7 +9,7 @@ if(!isObject(GlassHostingButton)) {
      enabled = "1";
      visible = "1";
      clipToParent = "1";
-     command = "canvas.popDialog(GlassHostingGui); canvas.pushDialog(GlassHostingGui);";
+     command = "GlassHosting::toggleWindow();";
      groupNum = "-1";
      buttonType = "PushButton";
      bitmap = "Add-Ons/Client_GlassHosting/img/btn_hosting";

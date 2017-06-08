@@ -29,7 +29,7 @@ new GuiControl(GlassHostingGui) {
       canMinimize = "0";
       canMaximize = "0";
       minSize = "50 50";
-      closeCommand = "canvas.popDialog(GlassHostingGui);";
+      closeCommand = "GlassHosting::toggleWindow();";
 
       new GuiSwatchCtrl(GlassHostingGui_AddTab) {
          profile = "GuiDefaultProfile";
@@ -87,7 +87,7 @@ new GuiControl(GlassHostingGui) {
             enabled = "1";
             visible = "1";
             clipToParent = "1";
-            command = "GlassHostingGui::codeInput(2);";
+            command = "GlassHosting::codeInput(2);";
             color = "255 255 255 255";
 
             new GuiMLTextCtrl() {
@@ -166,7 +166,7 @@ new GuiControl(GlassHostingGui) {
                   enabled = "1";
                   visible = "1";
                   clipToParent = "1";
-                  command = "GlassHostingGui::codeInput(3);";
+                  command = "GlassHosting::codeInput(3);";
                   altCommand = "GlassHostingGui::codeSubmit();";
                   maxLength = "255";
                   historySize = "0";
@@ -209,7 +209,7 @@ new GuiControl(GlassHostingGui) {
                enabled = "1";
                visible = "1";
                clipToParent = "1";
-               command = "GlassHostingGui::codeSubmit();";
+               command = "GlassHosting::codeSubmit();";
                text = "Add";
                groupNum = "-1";
                buttonType = "PushButton";
